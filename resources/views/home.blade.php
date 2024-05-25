@@ -51,12 +51,13 @@
                     </a>
                     <div class="collapse" id="ui-basic">
                         <ul class="nav flex-column sub-menu">
-                            <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Buttons</a>
+                            <li class="nav-item"> <a class="nav-link" 
+                                href="pages/ui-features/buttons.html">Artikel</a>
                             </li>
                             <li class="nav-item"> <a class="nav-link"
-                                    href="pages/ui-features/dropdowns.html">Dropdowns</a></li>
+                                    href="pages/ui-features/dropdowns.html">Kategori</a></li>
                             <li class="nav-item"> <a class="nav-link"
-                                    href="pages/ui-features/typography.html">Typography</a></li>
+                                    href="pages/ui-features/typography.html">Penulis </a></li>
                         </ul>
                     </div>
                 </li>
@@ -65,7 +66,6 @@
 
         {{-- NAVBAR --}}
         <div class="container-fluid page-body-wrapper">
-            <!-- partial:partials/_navbar.html -->
             <nav class="navbar p-0 fixed-top d-flex flex-row">
                 <div class="navbar-brand-wrapper d-flex d-lg-none align-items-center justify-content-center">
                     <a class="navbar-brand brand-logo-mini" href="index.html"><img src="assets/images/logo-mini.svg"
@@ -83,9 +83,9 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link" id="profileDropdown" href="#" data-toggle="dropdown">
                                 <div class="navbar-profile">
-                                    <img class="img-xs rounded-circle" src="assets/images/faces/face15.jpg"
+                                    <img class="img-xs rounded-circle" src="assets/images/faces/jon.webp"
                                         alt="">
-                                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Henry Klein</p>
+                                    <p class="mb-0 d-none d-sm-block navbar-profile-name">Jon Snow</p>
                                     <i class="mdi mdi-menu-down d-none d-sm-block"></i>
                                 </div>
                             </a>
