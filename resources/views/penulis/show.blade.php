@@ -31,21 +31,28 @@
                     <div class="col-md-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Detail Data Penulis</h4>
+                                <h3 class="card-title">Detail Data Penulis</h3>
+                                <form class="forms-sample" action="{{ route('penulis.update', $penulis->id) }}"
+                                    method="POST" enctype="multipart/form-data">
                                     @csrf
-                                    <table>
-                                        <tr>
-                                            <td>Nama Penulis &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                            <td>: &nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                            <td>{{ $penulis->nama_penulis}}</td>
-                                        </tr><br>
-                                        <tr>
-                                            <td>Email</td>
-                                            <td>:</td>
-                                            <td>{{ $penulis->email}}</td>
-                                        </tr>
-                                    </table><br>
-                                    <a href="{{url ('penulis')}}" class="btn btn-dark">Back</a>
+                                    @method('PUT')
+                                    <div class="form-group row">
+                                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Nama
+                                            Penulis</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="putih" name="nama_penulis"
+                                                placeholder="Nama Penulis" value="{{ $penulis->nama_penulis }}" disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Email</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" name="email" class="form-control" id="putih"
+                                                placeholder="Email" value="{{ $penulis->email }}" disabled>
+                                        </div>
+                                    </div>
+
+                                    <a href="{{url ('penulis')}}" class="btn btn-info">Back</a>
                                 </form>
                             </div>
                         </div>

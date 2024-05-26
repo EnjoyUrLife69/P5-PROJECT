@@ -40,15 +40,15 @@
                                     <div class="form-group row">
                                         <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Nama
                                             Kategori</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="nama_kategori"
+                                        <div class="col-sm-9"> 
+                                            <input type="text" class="form-control" name="nama_kategori" id="putih"
                                                 placeholder="Nama Kategori" value="{{ $kategori->nama_kategori }}">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Deskripsi</label>
                                         <div class="col-sm-9">
-                                            <input type="text" name="deskripsi" class="form-control"
+                                            <input type="text" name="deskripsi" class="form-control" id="putih"
                                                 placeholder="Deskripsi" value="{{ $kategori->deskripsi }}">
                                         </div>
                                     </div>

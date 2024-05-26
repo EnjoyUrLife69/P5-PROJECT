@@ -14,8 +14,18 @@ return new class extends Migration
     public function up()
     {
         Schema::create('artikels', function (Blueprint $table) {
-            $table->id();
+            $table->increments('id');
+            $table->string('judul');
+            $table->date('tanggal_publikasi');
+            $table->unsignedBigInteger('penulis_id');
+            $table->unsignedBigInteger('kategori_id');
+            $table->string('cover');
             $table->timestamps();
+
+            $table->foreign('penulis_id')->references('id')->on('penulis')->onDelete('cascade');
+            $table->foreign('kategori_id')->references('id')->on('kategoris')->onDelete('cascade');
+
+
         });
     }
 

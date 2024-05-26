@@ -13,8 +13,8 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('penulis_table', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('penulis', function (Blueprint $table) {
+            $table->id();
             $table->string('nama_penulis');
             $table->string('email');
             $table->timestamps();

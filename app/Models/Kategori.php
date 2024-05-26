@@ -12,10 +12,10 @@ class Kategori extends Model
     protected $fillable = ['id' , 'nama_kategori' , 'deskripsi'];
     public $timestamps = true;
 
-    // // relasi ke tabel artikel
-    // public function artikel()
-    // {
-    //     return $this->hasMany(Artikel::class);
-    // }
+    // relasi ke tabel artikel
+    public function artikel()
+    {
+        return $this->hasMany(Artikel::class);
+    }
 
 }

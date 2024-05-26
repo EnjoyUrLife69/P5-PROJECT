@@ -40,13 +40,13 @@
                                         <label for="exampleInputUsername2"  class="col-sm-3 col-form-label">Nama
                                             kategori</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="nama_kategori" placeholder="Nama Kategori">
+                                            <input type="text" class="form-control" id="putih" name="nama_kategori" placeholder="Nama Kategori">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">deskripsi</label>
+                                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Deskripsi</label>
                                         <div class="col-sm-9">
-                                            <input type="text" name="deskripsi" class="form-control" placeholder="Deskripsi">
+                                            <input type="text" name="deskripsi" id="putih" class="form-control" placeholder="Deskripsi">
                                         </div>
                                     </div>
 

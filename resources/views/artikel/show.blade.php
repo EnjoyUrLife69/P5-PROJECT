@@ -28,34 +28,62 @@
             {{-- FORM --}}
             <div class="main-panel">
                 <div class="content-wrapper">
-                    <div class="col-md-12 grid-margin stretch-card">
-                        <div class="card">
-                            <div class="card-body">
-                                <h4 class="card-title">Edit Data Penulis</h4>
-                                <p class="card-description"> Ubah data Penulis yang anda ingin </p>
-                                <form class="forms-sample" action="{{ route('penulis.update', $penulis->id) }}"
-                                    method="POST" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="col-md-7 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Detail Data Artikel</h3>
                                     @csrf
-                                    @method('PUT')
+                                   <div class="form-group row">
+                                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Nama
+                                            Artikel</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" class="form-control" id="putih" name="judul"
+                                                value="{{$artikel->judul}}"  disabled>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Tanggal
+                                            Publikasi</label>
+                                        <div class="col-sm-9">
+                                            <input type="date" name="tanggal_publikasi" class="form-control"
+                                                id="putih" value="{{$artikel->tanggal_publikasi}}" disabled >
+                                        </div>
+                                    </div>
                                     <div class="form-group row">
                                         <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Nama
                                             Penulis</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="putih" name="nama_penulis"
-                                                placeholder="Nama Penulis" value="{{ $penulis->nama_penulis }}">
+                                            <select class="form-control" name="penulis_id" id="exampleSelectGender" disabled >
+                                                @foreach ($penulis as $data)
+                                                <option value="{{ $data->id }}" {{ $data->id == $artikel->penulis_id ? 'selected' : '' }}>{{ $data->nama_penulis }}</option>
+                                            @endforeach
+                                            </select>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Email</label>
+                                        <label for="exampleInputUsername2"  class="col-sm-3 col-form-label">Kategori</label>
                                         <div class="col-sm-9">
-                                            <input type="text" name="email" class="form-control" id="putih"
-                                                placeholder="Email" value="{{ $penulis->email }}">
+                                            <select class="form-control" name="kategori_id" id="exampleSelectGender" disabled>
+                                                @foreach ($kategori as $data)
+                                                <option value="{{ $data->id }}" {{ $data->id == $artikel->kategori_id ? 'selected' : '' }}>{{ $data->nama_kategori }}</option>
+                                            @endforeach
+                                            </select>
                                         </div>
-                                    </div>
+                                    </div><br>
+                                    <a href="{{url ('artikel')}}" class="btn btn-info">Back</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="card-title">Cover</h4>
+                                    @csrf
+                                    <center><img src="{{ asset('images/artikel/' . $artikel->cover) }}" width="300"></center>
 
-                                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                    <a href="{{url ('penulis')}}" class="btn btn-dark">Cancel</a>
-                                </form>
+
+                                </div>
                             </div>
                         </div>
                     </div>

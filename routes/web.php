@@ -32,3 +32,7 @@ Route::resource('penulis', PenulisController::class);
 use App\Http\Controllers\KategoriController;
 Route::resource('kategori', KategoriController::class);
 
+use App\Http\Controllers\ArtikelController;
+Route::resource('artikel', ArtikelController::class);
+
+

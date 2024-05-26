@@ -31,21 +31,28 @@
                     <div class="col-md-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Detail Data Kategori</h4>
+                                <h3 class="card-title">Detail Data Kategori</h3>
+                                <form class="forms-sample" action="{{ route('kategori.update', $kategori->id) }}"
+                                    method="POST" enctype="multipart/form-data">
                                     @csrf
-                                    <table>
-                                        <tr>
-                                            <td>Nama Kategori &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                            <td>: &nbsp;&nbsp;&nbsp;&nbsp;</td>
-                                            <td>{{ $kategori->nama_kategori}}</td>
-                                        </tr><br>
-                                        <tr>
-                                            <td>Deskripsi</td>
-                                            <td>:</td>
-                                            <td>{{ $kategori->deskripsi}}</td>
-                                        </tr>
-                                    </table><br>
-                                    <a href="{{url ('kategori')}}" class="btn btn-dark">Back</a>
+                                    @method('PUT')
+                                    <div class="form-group row">
+                                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Nama
+                                            Kategori</label>
+                                        <div class="col-sm-9"> 
+                                            <input type="text" class="form-control" name="nama_kategori" id="putih" disabled
+                                                placeholder="Nama Kategori" value="{{ $kategori->nama_kategori }}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Deskripsi</label>
+                                        <div class="col-sm-9">
+                                            <input type="text" name="deskripsi" class="form-control" id="putih" disabled
+                                                placeholder="Deskripsi" value="{{ $kategori->deskripsi }}">
+                                        </div>
+                                    </div>
+
+                                    <a href="{{url ('kategori')}}" class="btn btn-info">Back</a>
                                 </form>
                             </div>
                         </div>

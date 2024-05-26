@@ -40,13 +40,13 @@
                                         <label for="exampleInputUsername2"  class="col-sm-3 col-form-label">Nama
                                             Penulis</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="nama_penulis" placeholder="Nama Penulis">
+                                            <input type="text" class="form-control" id="putih" name="nama_penulis" placeholder="Nama Penulis">
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Email</label>
                                         <div class="col-sm-9">
-                                            <input type="text" name="email" class="form-control" placeholder="Email">
+                                            <input type="text" name="email" class="form-control" id="putih" placeholder="Email">
                                         </div>
                                     </div>
 

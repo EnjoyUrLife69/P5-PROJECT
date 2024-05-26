@@ -28,7 +28,7 @@
             </a>
             <div class="collapse" id="ui-basic">
                 <ul class="nav flex-column sub-menu">
-                    <li class="nav-item"> <a class="nav-link" href="#">Artikel</a>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('artikel.index') }}">Artikel</a>
                     </li>
                     <li class="nav-item"> <a class="nav-link" href="{{ route('kategori.index') }}">Kategori</a></li>
                     <li class="nav-item"> <a class="nav-link" href="{{ route('penulis.index') }}">Penulis </a></li>
