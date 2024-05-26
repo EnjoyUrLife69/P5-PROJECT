@@ -29,7 +29,7 @@
             <div class="main-panel">
                 <div class="content-wrapper">
                     <div class="page-header">
-                        <h3 class="page-title"> Data Penulis </h3>
+                        <h3 class="page-title"> Data Kategori </h3>
                     </div>
                     @if (session('success'))
                                     <div class="alert alert-success" role="alert">
@@ -41,8 +41,8 @@
                             <div class="card">
                                 <div class="card-body">
                                     <div class="d-flex justify-content-between align-items-center">
-                                        <h4 class="card-title">Tabel Penulis</h4>
-                                        <a href="{{ route('penulis.create') }}" class="btn btn-primary">+ Add Data</a>
+                                        <h4 class="card-title">Tabel Kategori</h4>
+                                        <a href="{{ route('kategori.create') }}" class="btn btn-primary">+ Add Data</a>
                                     </div>
                                     <div class="table-responsive">
                                         <table class="table">
@@ -52,10 +52,10 @@
                                                             <h5>No</h5>
                                                         </b></th>
                                                     <th><b>
-                                                            <h5>Nama Penulis</h5>
+                                                            <h5>Nama Kategori</h5>
                                                         </b></th>
                                                     <th><b>
-                                                            <h5>Email</h5>
+                                                            <h5>Deskripsi</h5>
                                                         </b></th>
                                                     <th><b>
                                                             <h5>Action</h5>
@@ -64,19 +64,19 @@
                                             </thead>
                                             <tbody>
                                                 @php $no=1; @endphp
-                                                @foreach ($penulis as $data)
+                                                @foreach ($kategori as $data)
                                                     <tr class="odd gradeX">
                                                         <td>{{ $no++ }}</td>
-                                                        <td>{{ $data->nama_penulis }}</td>
-                                                        <td>{{ $data->email }}</td>
-                                                        <form action="{{ route('penulis.destroy', $data->id) }}"
+                                                        <td>{{ $data->nama_kategori }}</td>
+                                                        <td>{{ $data->deskripsi }}</td>
+                                                        <form action="{{ route('kategori.destroy', $data->id) }}"
                                                             method="POST">
                                                             @csrf
                                                             @method('DELETE')
                                                             <td>
-                                                                <a href="{{ route('penulis.edit', $data->id) }}"
+                                                                <a href="{{ route('kategori.edit', $data->id) }}"
                                                                     class="btn  btn-success">Edit</a>
-                                                                <a href="{{ route('penulis.show', $data->id) }}"
+                                                                <a href="{{ route('kategori.show', $data->id) }}"
                                                                     class="btn  btn-warning">Detail</a>
                                                                 <button class="btn  btn-danger" type="submit"
                                                                     onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">

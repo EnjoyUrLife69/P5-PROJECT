@@ -31,30 +31,21 @@
                     <div class="col-md-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Edit Data Penulis</h4>
-                                <p class="card-description"> Ubah data Penulis yang anda ingin </p>
-                                <form class="forms-sample" action="{{ route('penulis.update', $penulis->id) }}"
-                                    method="POST" enctype="multipart/form-data">
+                                <h4 class="card-title">Detail Data Kategori</h4>
                                     @csrf
-                                    @method('PUT')
-                                    <div class="form-group row">
-                                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Nama
-                                            Penulis</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="nama_penulis"
-                                                placeholder="Nama Penulis" value="{{ $penulis->nama_penulis }}">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Email</label>
-                                        <div class="col-sm-9">
-                                            <input type="text" name="email" class="form-control"
-                                                placeholder="Email" value="{{ $penulis->email }}">
-                                        </div>
-                                    </div>
-
-                                    <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                    <a href="{{url ('penulis')}}" class="btn btn-dark">Cancel</a>
+                                    <table>
+                                        <tr>
+                                            <td>Nama Kategori &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                            <td>: &nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                            <td>{{ $kategori->nama_kategori}}</td>
+                                        </tr><br>
+                                        <tr>
+                                            <td>Deskripsi</td>
+                                            <td>:</td>
+                                            <td>{{ $kategori->deskripsi}}</td>
+                                        </tr>
+                                    </table><br>
+                                    <a href="{{url ('kategori')}}" class="btn btn-dark">Back</a>
                                 </form>
                             </div>
                         </div>

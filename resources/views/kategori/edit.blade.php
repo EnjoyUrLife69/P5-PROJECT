@@ -31,30 +31,30 @@
                     <div class="col-md-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Edit Data Penulis</h4>
-                                <p class="card-description"> Ubah data Penulis yang anda ingin </p>
-                                <form class="forms-sample" action="{{ route('penulis.update', $penulis->id) }}"
+                                <h4 class="card-title">Edit Data Kategori</h4>
+                                <p class="card-description"> Ubah data Kategori yang anda ingin </p>
+                                <form class="forms-sample" action="{{ route('kategori.update', $kategori->id) }}"
                                     method="POST" enctype="multipart/form-data">
                                     @csrf
                                     @method('PUT')
                                     <div class="form-group row">
                                         <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Nama
-                                            Penulis</label>
+                                            Kategori</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" name="nama_penulis"
-                                                placeholder="Nama Penulis" value="{{ $penulis->nama_penulis }}">
+                                            <input type="text" class="form-control" name="nama_kategori"
+                                                placeholder="Nama Kategori" value="{{ $kategori->nama_kategori }}">
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Email</label>
+                                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Deskripsi</label>
                                         <div class="col-sm-9">
-                                            <input type="text" name="email" class="form-control"
-                                                placeholder="Email" value="{{ $penulis->email }}">
+                                            <input type="text" name="deskripsi" class="form-control"
+                                                placeholder="Deskripsi" value="{{ $kategori->deskripsi }}">
                                         </div>
                                     </div>
 
                                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                    <a href="{{url ('penulis')}}" class="btn btn-dark">Cancel</a>
+                                    <a href="{{url ('kategori')}}" class="btn btn-dark">Cancel</a>
                                 </form>
                             </div>
                         </div>

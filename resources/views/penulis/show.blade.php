@@ -45,7 +45,7 @@
                                             <td>{{ $penulis->email}}</td>
                                         </tr>
                                     </table><br>
-                                    <button href="{{route ('penulis.index')}}" class="btn btn-dark">Back</button>
+                                    <a href="{{url ('penulis')}}" class="btn btn-dark">Back</a>
                                 </form>
                             </div>
                         </div>

@@ -30,7 +30,7 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="#">Artikel</a>
                     </li>
-                    <li class="nav-item"> <a class="nav-link" href="#">Kategori</a></li>
+                    <li class="nav-item"> <a class="nav-link" href="{{ route('kategori.index') }}">Kategori</a></li>
                     <li class="nav-item"> <a class="nav-link" href="{{ route('penulis.index') }}">Penulis </a></li>
                 </ul>
             </div>
