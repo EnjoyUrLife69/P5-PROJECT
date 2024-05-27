@@ -25,9 +25,45 @@
         <div class="container-fluid page-body-wrapper">
             @include('layouts.navbar')
 
-            {{-- MAP --}}
+            {{-- MAP & ARTIKEL --}}
             <div class="main-panel">
                 <div class="content-wrapper">
+                    {{-- ARTIKEL --}}
+                    <div class="row">
+                        <div class="col-md-6 col-xl-4 grid-margin stretch-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    @csrf
+                                    <h4 class="card-title">judul-artikel</h4>
+                                    <div class="owl-carousel full-width"
+                                        id="owl-carousel-basic">
+                                        <div class="item">
+                                            <img src="assets/images/dashboard/Rectangle.jpg" alt="" disable>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex py-4">
+                                        <div class="preview-list w-100">
+                                            <div class="preview-item p-0">
+                                                <div class="preview-item-content d-flex flex-grow">
+                                                    <div class="flex-grow">
+                                                        <div
+                                                            class="d-flex d-md-block d-xl-flex justify-content-between">
+                                                            <h6 class="preview-subject">penulis_id</h6>
+                                                            <p class="text-muted text-small">tanggal_publikasi</p>
+                                                        </div>
+                                                        <p class="text-muted">Well, it seems to be working now.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <p class="text-muted">kategori_id</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {{-- MAP --}}
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
