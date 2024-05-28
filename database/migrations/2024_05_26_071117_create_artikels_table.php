@@ -19,6 +19,7 @@ return new class extends Migration
             $table->date('tanggal_publikasi');
             $table->unsignedBigInteger('penulis_id');
             $table->unsignedBigInteger('kategori_id');
+            $table->string('deskripsi');
             $table->string('cover');
             $table->timestamps();
 

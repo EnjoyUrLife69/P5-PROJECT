@@ -31,8 +31,8 @@
                     <div class="col-md-12 grid-margin stretch-card">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title">Add Data Artikel</h4>
-                                <p class="card-description"> Masukkan data Artikel yang ingin anda tambahkan </p>
+                                <h4 class="card-title">Edit Data Artikel</h4>
+                                <p class="card-description"> Ubah data Artikel yang anda inginkan </p>
                                 <form class="forms-sample" action="{{ route('artikel.update', $artikel->id) }}" method="post"
                                     role="form" enctype="multipart/form-data">
                                     @csrf
@@ -72,6 +72,12 @@
                                                 <option  value="{{ $data->id }}" {{ $data->id == $artikel->kategori_id ? 'selected' : '' }}>{{ $data->nama_kategori }}</option>
                                             @endforeach
                                             </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Deskripsi</label>
+                                        <div class="col-sm-9">
+                                            <textarea class="form-control" name="deskripsi" id="putih" rows="4">{{$artikel->deskripsi}}</textarea>
                                         </div>
                                     </div>
                                     <div class="form-group row">

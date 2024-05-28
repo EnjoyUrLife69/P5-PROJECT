@@ -58,6 +58,9 @@
                                                             <h5>Email</h5>
                                                         </b></th>
                                                     <th><b>
+                                                            <h5>Foto Profil</h5>
+                                                        </b></th>
+                                                    <th><b>
                                                             <h5>Action</h5>
                                                         </b></th>
                                                 </tr>
@@ -69,6 +72,9 @@
                                                         <td>{{ $no++ }}</td>
                                                         <td>{{ $data->nama_penulis }}</td>
                                                         <td>{{ $data->email }}</td>
+                                                        <td>
+                                                            <img src="{{asset('images/penulis/' . $data->foto_profil) }}" width="100">    
+                                                        </td>
                                                         <form action="{{ route('penulis.destroy', $data->id) }}"
                                                             method="POST">
                                                             @csrf

@@ -17,4 +17,12 @@ class Penulis extends Model
     {
         return $this->hasMany(Artikel::class);
     }
+
+    //menghapus img
+    public function deleteImage()
+    {
+        if ($this->foto_profil && file_exists(public_path('images/penulis' . $this->foto_profil))) {
+            return unlink(public_path('images/penulis' . $this->foto_profil));
+        }
+    }
 }

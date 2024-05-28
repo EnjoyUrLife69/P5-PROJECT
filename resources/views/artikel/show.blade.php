@@ -70,17 +70,23 @@
                                             @endforeach
                                             </select>
                                         </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Deskripsi</label>
+                                        <div class="col-sm-9">
+                                            <textarea class="form-control" name="deskripsi" id="putih" rows="4" disabled>{{$artikel->deskripsi}}</textarea>
+                                        </div>
                                     </div><br>
                                     <a href="{{url ('artikel')}}" class="btn btn-info">Back</a>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-5 grid-margin stretch-card">
+                        <div class="col-md-5 grid-margin">
                             <div class="card">
                                 <div class="card-body">
                                     <h4 class="card-title">Cover</h4>
                                     @csrf
-                                    <center><img src="{{ asset('images/artikel/' . $artikel->cover) }}" width="300"></center>
+                                    <center><img class="card" src="{{ asset('images/artikel/' . $artikel->cover) }}" width="380"></center>
 
 
                                 </div>

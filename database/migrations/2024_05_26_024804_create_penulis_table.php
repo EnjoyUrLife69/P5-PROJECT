@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_penulis');
             $table->string('email');
+            $table->string('foto_profil');
             $table->timestamps();
         });
     }

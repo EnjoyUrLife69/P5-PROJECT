@@ -52,6 +52,18 @@
                                                 placeholder="Email" value="{{ $penulis->email }}">
                                         </div>
                                     </div>
+                                    <div class="form-group row">
+                                        <label class="col-sm-3 col-form-label">Foto Profile</label>
+                                        <input type="file" name="foto_profil" class="file-upload-default">
+                                        <div class="input-group col-sm-9">
+                                            <input type="text" class="form-control file-upload-info"
+                                                disabled placeholder="Upload Image">
+                                            <span class="input-group-append">
+                                                <button class="file-upload-browse btn btn-primary"
+                                                    type="button">Upload</button>
+                                            </span>
+                                        </div>
+                                    </div>
 
                                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                                     <a href="{{url ('penulis')}}" class="btn btn-dark">Cancel</a>
@@ -74,6 +86,22 @@
         </div>
     </div>
 
+    {{-- FILE UPLOAD --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const uploadButton = document.querySelector('.file-upload-browse');
+            const fileInput = document.querySelector('.file-upload-default');
+
+            uploadButton.addEventListener('click', function () {
+                fileInput.click();
+            });
+
+            fileInput.addEventListener('change', function () {
+                const fileName = fileInput.files[0] ? fileInput.files[0].name : '';
+                document.querySelector('.file-upload-info').value = fileName;
+            });
+        });
+    </script>
 
 
     <script src="{{ asset('assets/vendors/js/vendor.bundle.base.js') }}"></script>

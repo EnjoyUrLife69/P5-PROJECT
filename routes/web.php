@@ -33,7 +33,7 @@ use App\Http\Controllers\KategoriController;
 Route::resource('kategori', KategoriController::class);
 
 use App\Http\Controllers\ArtikelController;
+Route::get('artikel', [ArtikelController::class, 'index']);
 Route::resource('artikel', ArtikelController::class);
-
 
 

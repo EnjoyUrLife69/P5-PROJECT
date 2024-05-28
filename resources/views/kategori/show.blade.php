@@ -45,10 +45,9 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Deskripsi</label>
+                                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Deskripsi</label>
                                         <div class="col-sm-9">
-                                            <input type="text" name="deskripsi" class="form-control" id="putih" disabled
-                                                placeholder="Deskripsi" value="{{ $kategori->deskripsi }}">
+                                            <textarea class="form-control" disabled name="deskripsi" id="putih" rows="4">{{$kategori->deskripsi}}</textarea>
                                         </div>
                                     </div>
 

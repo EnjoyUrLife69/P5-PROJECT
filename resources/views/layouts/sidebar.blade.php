@@ -13,9 +13,9 @@
         <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('home') }}">
                 <span class="menu-icon">
-                    <i class="mdi mdi-speedometer"></i>
+                    <i class="mdi mdi-bell-outline"></i>
                 </span>
-                <span class="menu-title">Dashboard</span>
+                <span class="menu-title">Artikel</span>
             </a>
         </li>
         <li class="nav-item menu-items">

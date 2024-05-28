@@ -16,7 +16,7 @@ class PenulisController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -54,6 +54,14 @@ class PenulisController extends Controller
         $penulis = new Penulis;
         $penulis->nama_penulis = $request->nama_penulis;
         $penulis->email = $request->email;
+
+        if ($request->hasFile('foto_profil')) {
+            $img = $request->file('foto_profil');
+            $name = rand(1000, 9999) . $img->getClientOriginalName();
+            $img->move('images/penulis', $name);
+            $penulis->foto_profil = $name;
+        }
+
         $penulis->save();
 
         return redirect()->route('penulis.index')->with('success', 'Data berhasil ditambahkan');
@@ -98,6 +106,14 @@ class PenulisController extends Controller
         $penulis = Penulis::FindOrFail($id);
         $penulis->nama_penulis = $request->nama_penulis;
         $penulis->email = $request->email;
+
+        if ($request->hasFile('foto_profil')) {
+            $img = $request->file('foto_profil');
+            $name = rand(1000, 9999) . $img->getClientOriginalName();
+            $img->move('images/penulis', $name);
+            $penulis->foto_profil = $name;
+        }
+
         $penulis->save();
         return redirect()->route('penulis.index')
             ->with('success', 'data berhasil di ubah');

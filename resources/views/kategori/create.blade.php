@@ -44,9 +44,9 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Deskripsi</label>
+                                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Deskripsi</label>
                                         <div class="col-sm-9">
-                                            <input type="text" name="deskripsi" id="putih" class="form-control" placeholder="Deskripsi">
+                                            <textarea class="form-control" placeholder="Deskripsi" name="deskripsi" id="putih" rows="4"></textarea>
                                         </div>
                                     </div>
 

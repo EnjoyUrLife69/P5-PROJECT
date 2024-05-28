@@ -64,6 +64,8 @@ class ArtikelController extends Controller
             $img->move('images/artikel', $name);
             $artikel->cover = $name;
         }
+        $artikel->deskripsi = $request->deskripsi;
+
 
         $artikel->save();
 
@@ -123,6 +125,8 @@ class ArtikelController extends Controller
             $img->move('images/artikel', $name);
             $artikel->cover = $name;
         }
+        $artikel->deskripsi = $request->deskripsi;
+
 
         $artikel->save();
 
