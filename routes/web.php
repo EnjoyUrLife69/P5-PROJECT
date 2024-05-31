@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
 
 Route::get('/home', function () {
     return view('home');
@@ -25,6 +25,11 @@ Route::get('/home', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name('welcome');
+
+use App\Http\Controllers\TampilController;
+Route::get('/tampil/{id}', [TampilController::class, 'tampil']);
+
 
 use App\Http\Controllers\PenulisController;
 Route::resource('penulis', PenulisController::class);

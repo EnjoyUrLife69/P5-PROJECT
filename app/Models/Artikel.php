@@ -9,7 +9,7 @@ class Artikel extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['id' , 'judul' , 'tanggal_publikasi' , 'penulis_id' , 'kategori_id' , 'cover'];
+    protected $fillable = ['id' , 'judul' , 'tanggal_publikasi' , 'penulis_id' , 'kategori_id' , 'cover' , "deskripsi", "isi"];
     public $timestamps = true;
 
     public function penulis()

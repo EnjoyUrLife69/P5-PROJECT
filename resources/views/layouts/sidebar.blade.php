@@ -11,6 +11,14 @@
             <span class="nav-link">Navigation</span>
         </li>
         <li class="nav-item menu-items">
+            <a class="nav-link" href="{{ route('welcome') }}">
+                <span class="menu-icon">
+                    <i class="mdi mdi-compass"></i>
+                </span>
+                <span class="menu-title">Home</span>
+            </a>
+        </li>
+        <li class="nav-item menu-items">
             <a class="nav-link" href="{{ route('home') }}">
                 <span class="menu-icon">
                     <i class="mdi mdi-bell-outline"></i>

@@ -65,6 +65,8 @@ class ArtikelController extends Controller
             $artikel->cover = $name;
         }
         $artikel->deskripsi = $request->deskripsi;
+        $artikel->isi = $request->isi;
+
 
 
         $artikel->save();
@@ -126,6 +128,7 @@ class ArtikelController extends Controller
             $artikel->cover = $name;
         }
         $artikel->deskripsi = $request->deskripsi;
+        $artikel->isi = $request->isi;
 
 
         $artikel->save();

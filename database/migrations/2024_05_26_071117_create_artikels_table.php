@@ -21,12 +21,11 @@ return new class extends Migration
             $table->unsignedBigInteger('kategori_id');
             $table->string('deskripsi');
             $table->string('cover');
+            $table->longtext('isi');
             $table->timestamps();
 
             $table->foreign('penulis_id')->references('id')->on('penulis')->onDelete('cascade');
             $table->foreign('kategori_id')->references('id')->on('kategoris')->onDelete('cascade');
-
-
         });
     }
 

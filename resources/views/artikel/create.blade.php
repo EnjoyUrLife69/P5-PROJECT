@@ -79,6 +79,14 @@
                                             <textarea class="form-control" name="deskripsi" id="putih" rows="4"></textarea>
                                         </div>
                                     </div>
+                                    
+                                    <div class="form-group row">
+                                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Isi
+                                            Artikel</label>
+                                        <div class="col-sm-9">
+                                            <textarea class="form-control" name="isi" id="putih" rows="4"></textarea>
+                                        </div>
+                                    </div>
                                     <div class="form-group row">
                                         <label class="col-sm-3 col-form-label">Cover</label>
                                         <input type="file" name="cover" class="file-upload-default">
@@ -91,7 +99,6 @@
                                             </span>
                                         </div>
                                     </div>
-
                                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
                                     <a href="{{ url('artikel') }}" class="btn btn-dark">Cancel</a>
                                 </form>
@@ -99,16 +106,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- content-wrapper ends -->
-                <!-- partial:../../partials/_footer.html -->
-                <footer class="footer">
-                    <div class="d-sm-flex justify-content-center justify-content-sm-between">
-                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright ©
-                            bootstrapdash.com 2020</span>
-
-                    </div>
-                </footer>
-                <!-- partial -->
             </div>
         </div>
     </div>
