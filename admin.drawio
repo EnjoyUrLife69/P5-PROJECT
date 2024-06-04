@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-06-04T01:21:26.125Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0" etag="kxrSLfNSv3YSu6asr6NY" version="24.4.13" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-04T01:53:27.750Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 OPR/109.0.0.0" etag="IuCdb-Sj014XBzJyPaVD" version="24.4.13" type="github">
   <diagram id="C5RBs43oDa-KdzZeNtuy" name="Page-1">
     <mxGraphModel dx="849" dy="531" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -29,7 +29,7 @@
         <mxCell id="f-X-oOXz8kQgfOrzTP2Q-8" value="YES" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="220" y="210" width="50" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="f-X-oOXz8kQgfOrzTP2Q-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WjMMoIh0oMpXKdFlW6NF-5" edge="1" target="f-X-oOXz8kQgfOrzTP2Q-4">
+        <mxCell id="f-X-oOXz8kQgfOrzTP2Q-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WjMMoIh0oMpXKdFlW6NF-5" target="f-X-oOXz8kQgfOrzTP2Q-4" edge="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="122.5" y="361" as="sourcePoint" />
             <mxPoint x="130" y="232.75" as="targetPoint" />
@@ -152,13 +152,13 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="f-X-oOXz8kQgfOrzTP2Q-65" value="Hasil CRUD atau&lt;div&gt;Tabel Penulis&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="f-X-oOXz8kQgfOrzTP2Q-65" value="Hasil CRUD&lt;div&gt;Tabel Penulis&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="130" y="864.31" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="f-X-oOXz8kQgfOrzTP2Q-66" value="Hasil CRUD atau&lt;div&gt;Tabel Artikel&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="f-X-oOXz8kQgfOrzTP2Q-66" value="Hasil CRUD&lt;div&gt;&lt;div&gt;Tabel Artikel&lt;/div&gt;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="272.5" y="864.31" width="120" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="f-X-oOXz8kQgfOrzTP2Q-67" value="Hasil CRUD atau&lt;div&gt;Tabel Kategori&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+        <mxCell id="f-X-oOXz8kQgfOrzTP2Q-67" value="Hasil CRUD&lt;div&gt;Tabel Kategori&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
           <mxGeometry x="424.5" y="863.31" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="f-X-oOXz8kQgfOrzTP2Q-70" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.366;entryY=0.527;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" target="f-X-oOXz8kQgfOrzTP2Q-72" edge="1">
