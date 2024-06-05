@@ -36,34 +36,45 @@
                                 <form class="forms-sample" action="{{ route('penulis.store') }}" method="post"
                                     role="form" enctype="multipart/form-data">
                                     @csrf
+                                    @if ($errors->has('nama_penulis'))
+                                        <div class="alert alert-danger">
+                                            {{ $errors->first('nama_penulis') }}
+                                        </div>
+                                    @endif
+                                    @if ($errors->has('email'))
+                                        <div class="alert alert-danger">
+                                            {{ $errors->first('email') }}
+                                        </div>
+                                    @endif
                                     <div class="form-group row">
-                                        <label for="exampleInputUsername2"  class="col-sm-3 col-form-label">Nama
+                                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Nama
                                             Penulis</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="putih" name="nama_penulis" placeholder="Nama Penulis">
+                                            <input type="text" class="form-control" id="putih"
+                                                name="nama_penulis" placeholder="Nama Penulis" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="exampleInputEmail2" class="col-sm-3 col-form-label">Email</label>
                                         <div class="col-sm-9">
-                                            <input type="text" name="email" class="form-control" id="putih" placeholder="Email">
+                                            <input type="text" name="email" class="form-control" id="putih"
+                                                placeholder="Email" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-sm-3 col-form-label">Foto Profile</label>
                                         <input type="file" name="foto_profil" class="file-upload-default">
                                         <div class="input-group col-sm-9">
-                                            <input type="text" class="form-control file-upload-info"
-                                                disabled placeholder="Upload Image">
+                                            <input type="text" class="form-control file-upload-info" disabled
+                                                placeholder="Upload Image" required>
                                             <span class="input-group-append">
                                                 <button class="file-upload-browse btn btn-primary"
                                                     type="button">Upload</button>
                                             </span>
                                         </div>
                                     </div>
-
                                     <button type="submit" class="btn btn-primary mr-2">Submit</button>
-                                    <a href="{{url ('penulis')}}" class="btn btn-dark">Cancel</a>
+                                    <a href="{{ url('penulis') }}" class="btn btn-dark">Cancel</a>
                                 </form>
                             </div>
                         </div>
@@ -76,15 +87,15 @@
 
     {{-- FILE UPLOAD --}}
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const uploadButton = document.querySelector('.file-upload-browse');
             const fileInput = document.querySelector('.file-upload-default');
 
-            uploadButton.addEventListener('click', function () {
+            uploadButton.addEventListener('click', function() {
                 fileInput.click();
             });
 
-            fileInput.addEventListener('change', function () {
+            fileInput.addEventListener('change', function() {
                 const fileName = fileInput.files[0] ? fileInput.files[0].name : '';
                 document.querySelector('.file-upload-info').value = fileName;
             });

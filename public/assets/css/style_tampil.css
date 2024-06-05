@@ -134,6 +134,7 @@ button:hover {
     font-size: 20px;
 }
 
+
 /* CONTENT */
 .content {
     width: 90%;
@@ -152,6 +153,7 @@ button:hover {
 }
 .content .col2 {
     color: #ffffff;
+    overflow: hidden;
     font-size: 25px;
     text-align: justify;
     margin-top: -20px;

@@ -16,7 +16,7 @@ class KategoriController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -46,6 +46,19 @@ class KategoriController extends Controller
      */
     public function store(Request $request)
     {
+
+        $validated = $request->validate([
+            'nama_kategori' => 'required|string|max:255|unique:kategoris',
+            'deskripsi' => 'required|string|max:255',
+        ],
+
+        [
+            'nama_kategori.required' => 'Nama harus diisi',
+            'nama_kategori.unique' => 'Kategori dengan nama tersebut sudah ada sebelumnya.',
+            'deskripsi.required' => 'Deskripsi harus diisi',
+        ]
+    
+    );
 
         $kategori = new Kategori;
         $kategori->nama_kategori = $request->nama_kategori;

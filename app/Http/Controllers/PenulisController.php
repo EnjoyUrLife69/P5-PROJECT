@@ -17,6 +17,7 @@ class PenulisController extends Controller
         $this->middleware('auth');
     }
 
+
     /**
      * Display a listing of the resource.
      *
@@ -46,10 +47,21 @@ class PenulisController extends Controller
      */
     public function store(Request $request)
     {
-        $request->validate([
-            'nama_penulis' => 'required|string|max:255',
+        
+        $validated = $request->validate([
+            'nama_penulis' => 'required|string|max:255|unique:penulis',
             'email' => 'required|email|unique:penulis,email',
-        ]);
+            'foto_profil' => 'required|max:5400|mimes:png,jpg,webp'
+        ],
+        [
+            'nama_penulis.required' => 'wajib diisi !',
+            'nama_penulis.unique' => 'Nama Penulis sudah terdaftar !',
+            'email.unique' => 'Email sudah terdaftar !',
+            'email.email' => 'Email harus valid !',
+            'email.required' => 'wajib diisi !',
+            'foto_profil.required' => 'wajib diisi !',
+        ]
+        );
 
         $penulis = new Penulis;
         $penulis->nama_penulis = $request->nama_penulis;

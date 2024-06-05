@@ -16917,6 +16917,13 @@ code {
 #putih{
   color: #ffffff;
 }
+#putih2 {
+  color: #ffffff;
+}
+.cke_editable {
+  color: black !important;
+  /* Ubah warna teks menjadi hitam */
+}
 
 .input-group-append,
 .input-group-prepend {

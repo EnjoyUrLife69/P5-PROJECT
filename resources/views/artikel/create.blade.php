@@ -41,7 +41,7 @@
                                             Artikel</label>
                                         <div class="col-sm-9">
                                             <input type="text" class="form-control" id="putih" name="judul"
-                                                placeholder="Judul artikel">
+                                                placeholder="Judul artikel" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -49,50 +49,60 @@
                                             Publikasi</label>
                                         <div class="col-sm-9">
                                             <input type="date" name="tanggal_publikasi" class="form-control"
-                                                id="putih" placeholder="dd/mm/yyyy">
+                                                id="putih" placeholder="dd/mm/yyyy" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Nama
                                             Penulis</label>
                                         <div class="col-sm-9">
-                                            <select class="form-control" name="penulis_id" id="putih" id="exampleSelectGender" >
+                                             
+                                            <select class="form-control" name="penulis_id" id="putih"
+                                                id="exampleSelectGender">
+                                                <option value="" selected disabled>Pilih Penulis</option>
                                                 @foreach ($penulis as $data)
-                                                <option value="{{ $data->id }}">{{ $data->nama_penulis }}</option>
-                                            @endforeach
+                                                    <option value="{{ $data->id }}">{{ $data->nama_penulis }}
+                                                    </option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="exampleInputUsername2"  class="col-sm-3 col-form-label">Kategori</label>
+                                        <label for="exampleInputUsername2"
+                                            class="col-sm-3 col-form-label">Kategori</label>
                                         <div class="col-sm-9">
-                                            <select class="form-control" name="kategori_id" id="putih" id="exampleSelectGender">
+                                            <select class="form-control" name="kategori_id" id="putih"
+                                                id="exampleSelectGender">
+                                                 <option value="" selected disabled>Pilih Kategori</option>
+            
                                                 @foreach ($kategori as $data)
-                                                <option value="{{ $data->id }}">{{ $data->nama_kategori }}</option>
-                                            @endforeach
+                                                    <option value="{{ $data->id }}">{{ $data->nama_kategori }}
+                                                    </option>
+                                                @endforeach
                                             </select>
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Deskripsi</label>
+                                        <label for="exampleInputUsername2"
+                                            class="col-sm-3 col-form-label">Deskripsi</label>
                                         <div class="col-sm-9">
-                                            <textarea class="form-control" name="deskripsi" id="putih" rows="4"></textarea>
+                                            <textarea class="form-control" name="deskripsi" id="putih" rows="4" required></textarea>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group row">
                                         <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Isi
                                             Artikel</label>
                                         <div class="col-sm-9">
-                                            <textarea class="form-control" name="isi" id="putih" rows="4"></textarea>
+                                            <textarea class="form-control" name="isi" id="putih" rows="4" required></textarea>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label class="col-sm-3 col-form-label">Cover</label>
                                         <input type="file" name="cover" class="file-upload-default">
                                         <div class="input-group col-sm-9">
-                                            <input type="text" class="form-control file-upload-info"
-                                                disabled placeholder="Upload Image">
+                                            <input type="text" class="form-control file-upload-info" disabled
+                                                placeholder="Upload Image">
                                             <span class="input-group-append">
                                                 <button class="file-upload-browse btn btn-primary"
                                                     type="button">Upload</button>
@@ -111,15 +121,15 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const uploadButton = document.querySelector('.file-upload-browse');
             const fileInput = document.querySelector('.file-upload-default');
 
-            uploadButton.addEventListener('click', function () {
+            uploadButton.addEventListener('click', function() {
                 fileInput.click();
             });
 
-            fileInput.addEventListener('change', function () {
+            fileInput.addEventListener('change', function() {
                 const fileName = fileInput.files[0] ? fileInput.files[0].name : '';
                 document.querySelector('.file-upload-info').value = fileName;
             });

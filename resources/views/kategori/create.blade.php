@@ -36,17 +36,22 @@
                                 <form class="forms-sample" action="{{ route('kategori.store') }}" method="post"
                                     role="form" enctype="multipart/form-data">
                                     @csrf
+                                    @if ($errors->has('nama_kategori'))
+                                        <div class="alert alert-danger">
+                                            {{ $errors->first('nama_kategori') }}
+                                        </div>
+                                    @endif
                                     <div class="form-group row">
                                         <label for="exampleInputUsername2"  class="col-sm-3 col-form-label">Nama
                                             kategori</label>
                                         <div class="col-sm-9">
-                                            <input type="text" class="form-control" id="putih" name="nama_kategori" placeholder="Nama Kategori">
+                                            <input type="text" class="form-control" id="putih" name="nama_kategori" placeholder="Nama Kategori" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="exampleInputUsername2" class="col-sm-3 col-form-label">Deskripsi</label>
                                         <div class="col-sm-9">
-                                            <textarea class="form-control" placeholder="Deskripsi" name="deskripsi" id="putih" rows="4"></textarea>
+                                            <textarea required class="form-control" placeholder="Deskripsi" name="deskripsi" id="putih" rows="4"></textarea>
                                         </div>
                                     </div>
 

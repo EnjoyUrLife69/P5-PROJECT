@@ -42,7 +42,7 @@
                                             Artikel</label>
                                         <div class="col-sm-9">
                                             <input type="text" class="form-control" id="putih" name="judul"
-                                                value="{{ $artikel->judul }}">
+                                                value="{{ $artikel->judul }}" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -50,7 +50,7 @@
                                             Publikasi</label>
                                         <div class="col-sm-9">
                                             <input type="date" name="tanggal_publikasi" class="form-control"
-                                                id="putih" value="{{ $artikel->tanggal_publikasi }}">
+                                                id="putih" value="{{ $artikel->tanggal_publikasi }}" required>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -85,14 +85,14 @@
                                         <label for="exampleInputUsername2"
                                             class="col-sm-3 col-form-label">Deskripsi</label>
                                         <div class="col-sm-9">
-                                            <textarea class="form-control" name="deskripsi" id="putih" rows="4">{{ $artikel->deskripsi }}</textarea>
+                                            <textarea class="form-control" name="deskripsi" id="putih" rows="4" required>{{ $artikel->deskripsi }}</textarea>
                                         </div>
                                     </div>
                                     <div class="form-group row">
                                         <label for="exampleInputUsername2"
                                             class="col-sm-3 col-form-label">isi Artikel</label>
                                         <div class="col-sm-9">
-                                            <textarea style="height: 200px" class="form-control" name="isi" id="putih" rows="4">{{ $artikel->isi }}</textarea>
+                                            <textarea style="height: 200px" class="form-control" name="isi" id="putih" rows="4" required>{{ $artikel->isi }}</textarea>
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -101,7 +101,7 @@
                                             {{ $artikel->cover }}>
                                         <div class="input-group col-sm-9">
                                             <input type="text" class="form-control file-upload-info" disabled
-                                                placeholder="Upload Image">
+                                                placeholder="Upload Image" required>
                                             <span class="input-group-append">
                                                 <button class="file-upload-browse btn btn-primary"
                                                     type="button">Upload</button>

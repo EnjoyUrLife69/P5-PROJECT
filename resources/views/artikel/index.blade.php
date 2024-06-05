@@ -28,14 +28,46 @@
             {{-- TABEL --}}
             <div class="main-panel">
                 <div class="content-wrapper">
-                    <div class="page-header">
-                        <h3 class="page-title"> Data Artikel </h3>
-                    </div>
                     @if (session('success'))
                                     <div class="alert alert-success" role="alert">
                                         {{ session('success') }}
                                     </div>
                                 @endif
+                    {{-- FILTER --}}
+                    <div class="row">
+                        <div class="col-md-6 col-xl-7 grid-margin stretch-card ml-auto" style="">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p style="font-size: 30px; text-align: center; margin-top: 6%">Halaman Data Artikel</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-xl-5 grid-margin stretch-card ml-auto" style="">
+                            <div class="card">
+                                <div class="card-body">
+                                    <p>Filter by Category</p>
+                                    <form method="GET" action="{{ route('artikel.index') }}">
+                                        <select class="form-control" name="kategori_id" id="putih"
+                                            id="exampleSelectGender">
+                                            <option value=""
+                                                {{ is_null(request()->get('kategori_id')) ? 'selected' : '' }}>
+                                                Tampilkan Semua Artikel</option>
+                                            @foreach ($kategori as $data)
+                                                <option value="{{ $data->id }}"
+                                                    {{ request()->get('kategori_id') == $data->id ? 'selected' : '' }}>
+                                                    {{ $data->nama_kategori }}
+                                                </option>
+                                            @endforeach
+                                        </select>
+                                        <button type="submit" class="btn btn-primary mt-3">Search</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @if ($artikel->isEmpty())
+                        <p style="font-size: 20px; text-align: center;">Tidak ada Artikel untuk Kategori ini.</p>
+                    @else
                     <div class="row">
                         <div class="col-lg-12 grid-margin stretch-card">
                             <div class="card">
@@ -58,7 +90,7 @@
                                                             <h5>Tanggal Publikasi</h5>
                                                         </b></th>
                                                     <th><b>
-                                                            <h5>Nama Penulis</h5>
+                                                            <h5>Penulis</h5>
                                                         </b></th>
                                                     <th><b>
                                                             <h5>Kategori</h5>
@@ -107,6 +139,7 @@
                             </div>
                         </div>
                     </div>
+                    @endif
                 </div>
             </div>
         </div>

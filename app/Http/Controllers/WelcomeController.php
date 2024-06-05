@@ -14,7 +14,8 @@ class WelcomeController extends Controller
      */
     public function index()
     {
-        $artikel = Artikel::all();
+        $artikel = Artikel::orderBy('created_at', 'desc')->get();
+
         return view('welcome' , compact('artikel'));
     }
 }

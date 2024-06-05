@@ -25,10 +25,23 @@ class ArtikelController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $artikel = Artikel::all();
-        return view('artikel.index' , compact('artikel'));
+        $kategori = Kategori::all();
+
+        // Ambil ID kategori dari request
+        $kategori_id = $request->get('kategori_id');
+
+        // Jika kategori_id ada dan tidak kosong, filter artikel berdasarkan kategori tersebut
+        if ($kategori_id) {
+            $artikel = Artikel::where('kategori_id', $kategori_id)->get();
+        } else {
+            // Jika tidak, ambil semua artikel
+           $artikel = Artikel::orderBy('created_at', 'desc')->get();
+
+        }
+
+        return view('artikel.index', compact('artikel', 'kategori', 'kategori_id'));
 
     }
     /**
@@ -52,6 +65,14 @@ class ArtikelController extends Controller
     public function store(Request $request)
     {
 
+        $validated = $request->validate([
+            'judul' => 'required|string|max:255',
+            'tanggal_publikasi' => 'required',
+            'cover' => 'required|max:5400|mimes:png,jpg,webp',
+            'deskripsi' => 'required',
+            'isi' => 'required',
+        ]);
+
         $artikel = new Artikel;
         $artikel->judul = $request->judul;
         $artikel->tanggal_publikasi = $request->tanggal_publikasi;
@@ -66,8 +87,6 @@ class ArtikelController extends Controller
         }
         $artikel->deskripsi = $request->deskripsi;
         $artikel->isi = $request->isi;
-
-
 
         $artikel->save();
 
@@ -114,6 +133,13 @@ class ArtikelController extends Controller
      */
     public function update(Request $request, $id)
     {
+        $validated = $request->validate([
+            'judul' => 'required|string|max:255',
+            'tanggal_publikasi' => 'required',
+            'cover' => 'max:5400|mimes:png,jpg,webp',
+            'deskripsi' => 'required',
+            'isi' => 'required',
+        ]);
 
         $artikel = Artikel::FindOrFail($id);
         $artikel->judul = $request->judul;
@@ -129,7 +155,6 @@ class ArtikelController extends Controller
         }
         $artikel->deskripsi = $request->deskripsi;
         $artikel->isi = $request->isi;
-
 
         $artikel->save();
 
