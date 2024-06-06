@@ -68,7 +68,7 @@ class ArtikelController extends Controller
         $validated = $request->validate([
             'judul' => 'required|string|max:255',
             'tanggal_publikasi' => 'required',
-            'cover' => 'required|max:5400|mimes:png,jpg,webp',
+            'cover' => 'required|max:5400|mimes:png,jpg,wedp',
             'deskripsi' => 'required',
             'isi' => 'required',
         ]);
