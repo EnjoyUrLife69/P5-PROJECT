@@ -8,6 +8,7 @@
     <title>ARTICLE's</title>
     <link rel="stylesheet" href="{{ asset('assets/css/style_welcome.css') }}">
     <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+    <link rel="icon" href="{{ asset('assets/images/graduation-hat.png') }}">
 </head>
 
 <body>
@@ -26,7 +27,7 @@
             <div class="col2">Temukan Berbagai Artikel Menarik dan Inspiratif ,
                 <br> Jelajahi berbagai artikel kami yang mencakup beragam topik, dari teknologi hingga gaya
                 hidup,
-                dari kesehatan hingga hiburan. <br><br><a href="#artikel"><button>Mulai Membaca Artikel</button></a></div>
+                dari kesehatan hingga hiburan. <br><br><a href="#artikel"><button style="height: 4%">Mulai Membaca Artikel</button></a></div>
         </div>
     </div>
     <div class="content auto auto-height-div" id="artikel">
